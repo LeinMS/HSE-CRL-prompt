@@ -1,0 +1,50 @@
+defaults:
+  - _self_
+  - prompts
+  - models
+
+dataset:
+  name: "trec"
+  subset: null
+  train_size: 200
+  eval_size: 100
+  splits:
+    train: "train"
+    eval: "test"
+  columns:
+    text: "text"
+    label: "coarse_label"
+
+task:
+  description: "Classify questions into categories"
+  label_map:
+    0: "Abbreviation"
+    1: "Entity"
+    2: "Description"
+    3: "Human"
+    4: "Location"
+    5: "Number"
+  category_descriptions:
+    "Abbreviation": "Abbreviation"
+    "Entity": "Entity"
+    "Description": "Description"
+    "Human": "Human"
+    "Location": "Location"
+    "Number": "Number"
+
+prompts_fallback:
+  - "This question is asking about {mask_token}."
+  - "The type of this question is {mask_token}."
+  - "This question belongs to the {mask_token} category."
+  - "The question is seeking {mask_token} information."
+
+model:
+  name: null
+
+method: null
+method_cfg: {}
+
+train:
+  epochs: 5
+  lr: 2e-3
+  batch: 16

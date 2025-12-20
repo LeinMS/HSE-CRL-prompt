@@ -1,0 +1,51 @@
+defaults:
+  - _self_
+  - prompts
+  - models
+
+dataset:
+  name: "glue"
+  subset: "sst2"
+  train_size: 200
+  eval_size: 100
+  splits:
+    train: "train"
+    eval: "validation"
+  columns:
+    text: "sentence"
+    label: "label"
+
+model:
+  name: null
+
+method: null
+method_cfg: {}
+
+train:
+  epochs: 5
+  lr: 2e-3
+  batch: 16
+
+models:
+  generator: "gpt-4.1-mini-2025-04-14"
+  evaluator: "roberta-base"
+
+generation:
+  num_candidates: 5
+  max_tokens: 150
+  temperature: 1.0
+
+evaluation:
+  batch_size: 32
+
+task:
+  description: "Classify movie reviews as positive or negative"
+  label_map:
+    0: "negative"
+    1: "positive"
+
+prompts_fallback:
+  - "This review expresses a {mask_token} sentiment."
+  - "The overall tone of this review is {mask_token}."
+  - "This review is {mask_token} in nature."
+  - "The sentiment conveyed in this review is {mask_token}."

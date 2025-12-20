@@ -1,0 +1,7 @@
+{
+  "dataset": "trec",
+  "method": "ape",
+  "epochs": 0,
+  "eval_accuracy": 0.54,
+  "best_prompt": "Classify the following text: \"{x}\". Labels: Abbreviation, Entity, Description, Human, Location, Number. Answer:"
+}

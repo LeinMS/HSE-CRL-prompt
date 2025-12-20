@@ -1,0 +1,12 @@
+{
+  "dataset": "ag_news",
+  "method": "mixture_soft",
+  "train_time_sec": 2739.31,
+  "epochs": 5,
+  "eval_loss": 0.4553508460521698,
+  "eval_accuracy": 0.8878947368421053,
+  "eval_runtime": 15.3914,
+  "eval_samples_per_second": 493.783,
+  "eval_steps_per_second": 30.861,
+  "epoch": 5.0
+}

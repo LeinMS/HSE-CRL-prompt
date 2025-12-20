@@ -1,0 +1,33 @@
+{
+  "dataset": "ag_news",
+  "num_train": 120000,
+  "num_val": 7600,
+  "avg_len": 53.8,
+  "max_len": 128,
+  "p50": 52.0,
+  "p90": 71.0,
+  "p95": 82.0,
+  "p99": 123.0,
+  "task": "cls",
+  "num_labels": 4,
+  "class_distribution": {
+    "0": 30000,
+    "1": 30000,
+    "2": 30000,
+    "3": 30000
+  },
+  "preview": [
+    {
+      "text": "Wall St. Bears Claw Back Into the Black (Reuters) Reuters - Short-sellers, Wall Street's dwindling\\band of ultra-cynics,…",
+      "label": 2
+    },
+    {
+      "text": "Carlyle Looks Toward Commercial Aerospace (Reuters) Reuters - Private investment firm Carlyle Group,\\which has a reputat…",
+      "label": 2
+    },
+    {
+      "text": "Oil and Economy Cloud Stocks' Outlook (Reuters) Reuters - Soaring crude prices plus worries\\about the economy and the ou…",
+      "label": 2
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+defaults:
+  - _base
+  - _self_
+dataset: ag_news
+model:
+  name: tiiuae/falcon-rw-1b
+method: prompt_v1
+method_cfg:             
+  num_virtual_tokens: 10       
+  init_text: null
+device: cuda:0

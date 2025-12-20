@@ -1,0 +1,14 @@
+defaults:
+  - _self_
+
+dataset: null
+model:
+  name: null
+
+method: null
+method_cfg: {}
+
+train:
+  epochs: 5
+  lr: 2e-3
+  batch: 8

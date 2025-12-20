@@ -1,0 +1,7 @@
+{
+  "dataset": "sst2",
+  "method": "ape",
+  "epochs": 0,
+  "eval_accuracy": 0.8268348623853211,
+  "best_prompt": "Review: \"{x}\" \u2192 Sentiment = "
+}

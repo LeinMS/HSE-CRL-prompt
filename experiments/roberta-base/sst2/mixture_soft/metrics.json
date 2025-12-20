@@ -1,0 +1,12 @@
+{
+  "dataset": "sst2",
+  "method": "mixture_soft",
+  "train_time_sec": 1511.75,
+  "epochs": 5,
+  "eval_loss": 0.23461796343326569,
+  "eval_accuracy": 0.9220183486238532,
+  "eval_runtime": 1.826,
+  "eval_samples_per_second": 477.559,
+  "eval_steps_per_second": 30.121,
+  "epoch": 5.0
+}

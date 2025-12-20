@@ -1,0 +1,15 @@
+defaults:
+  - _base
+  - _self_
+dataset: empatheticdialogues
+model:
+  name: roberta-base
+method: prompt_v2
+method_cfg:
+  num_virtual_tokens: 20
+  prefix_projection: false
+train: 
+  max_length: 512
+  batch_size: 8
+  epochs: 20
+device: cuda:0

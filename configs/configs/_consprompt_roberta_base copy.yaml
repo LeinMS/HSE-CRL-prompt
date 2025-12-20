@@ -1,0 +1,20 @@
+defaults:
+  - _base
+  - _self_
+dataset: trec
+model:
+  name: roberta-base
+method: cons_prompt
+method_cfg:
+  templates:
+    - "Question: {text}. Class of question (Abbreviation, Entity, Description, Human, Location, Number): <mask>."
+  verbalizer: ["ĠAb", "ĠEntity", "ĠDescription", "ĠHuman", "ĠLocation", "ĠNumber"]
+  lambda_p: 0.5
+  lambda_b: 0.5
+  soft_prompt_length: 30
+  num_labels
+train:
+  batch: 16
+  epochs: 20
+
+device: cuda:0

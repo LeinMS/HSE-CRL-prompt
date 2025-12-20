@@ -1,0 +1,31 @@
+{
+  "dataset": "sst2",
+  "num_train": 67349,
+  "num_val": 872,
+  "avg_len": 14.36,
+  "max_len": 67,
+  "p50": 11.0,
+  "p90": 28.0,
+  "p95": 34.0,
+  "p99": 45.0,
+  "task": "cls",
+  "num_labels": 2,
+  "class_distribution": {
+    "0": 29780,
+    "1": 37569
+  },
+  "preview": [
+    {
+      "text": "hide new secretions from the parental units ",
+      "label": 0
+    },
+    {
+      "text": "contains no wit , only labored gags ",
+      "label": 0
+    },
+    {
+      "text": "that loves its characters and communicates something rather beautiful about human nature ",
+      "label": 1
+    }
+  ]
+}

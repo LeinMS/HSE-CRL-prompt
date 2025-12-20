@@ -1,0 +1,30 @@
+defaults:
+  - _self_
+  - prompts
+  - models
+
+dataset:
+  name: "ag_news"
+  subset: null
+  train_size: 200
+  eval_size: 100
+  splits:
+    train: "train"
+    eval: "test"
+  columns:
+    text: "text"
+    label: "label"
+
+task:
+  description: "Classify news articles into categories"
+  label_map:
+    0: "World"
+    1: "Sports"
+    2: "Business"
+    3: "Science"
+
+prompts_fallback:
+  - "This news article belongs to the {mask_token} category."
+  - "The topic of this article is {mask_token}."
+  - "This article is about {mask_token}."
+  - "The category of this news is {mask_token}."

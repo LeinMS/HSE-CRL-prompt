@@ -1,0 +1,12 @@
+{
+  "dataset": "ag_news",
+  "method": "prompt_v1",
+  "train_time_sec": 7651.69,
+  "epochs": 5,
+  "eval_loss": 0.2096875011920929,
+  "eval_accuracy": 0.9293421052631579,
+  "eval_runtime": 52.1083,
+  "eval_samples_per_second": 145.85,
+  "eval_steps_per_second": 18.231,
+  "epoch": 5.0
+}

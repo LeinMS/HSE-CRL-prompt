@@ -1,0 +1,11 @@
+models:
+  generator: "gpt-4.1-mini-2025-04-14"
+  evaluator: "roberta-base"
+
+generation:
+  num_candidates: 5
+  max_tokens: 150
+  temperature: 0.3
+
+evaluation:
+  batch_size: 32 

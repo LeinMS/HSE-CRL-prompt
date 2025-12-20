@@ -1,0 +1,12 @@
+{
+  "dataset": "sst2",
+  "method": "prompt_v1",
+  "train_time_sec": 442.22,
+  "epochs": 5,
+  "eval_loss": 0.2954236567020416,
+  "eval_accuracy": 0.8979357798165137,
+  "eval_runtime": 0.5021,
+  "eval_samples_per_second": 1736.664,
+  "eval_steps_per_second": 109.537,
+  "epoch": 5.0
+}

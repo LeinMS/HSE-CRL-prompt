@@ -1,0 +1,11 @@
+defaults:
+  - _base
+  - _self_
+dataset: trec
+model:
+  name: roberta-base
+method: prompt_v2
+method_cfg:
+  num_virtual_tokens: 15
+  prefix_projection: false
+device: cuda:0

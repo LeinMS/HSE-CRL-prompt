@@ -1,0 +1,36 @@
+dataset: ag_news
+method: ape
+
+model:
+  name: roberta-base
+
+method_cfg:
+  templates:
+    - "News: \"{x}\". Category: "
+    - "Read the following news: \"{x}\". What is the category? Answer: "
+    - "News: \"{x}\" → Category = "
+  verbalizer:
+    0:
+      - ĠWorld
+    1:
+      - ĠSport
+    2:
+      - ĠBusiness
+    3:
+      - ĠScience
+  labels:
+    - World
+    - Sport
+    - Business
+    - Science
+  text_column: text
+  label_column: label
+  openai_api_key: sk-proj-0123456789abcdef0123456789abcdef
+  task_for_model: "Predict the category of a given news article"
+
+device: cuda
+
+train:
+  epochs: 3
+  batch: 16
+  lr: 2e-5 

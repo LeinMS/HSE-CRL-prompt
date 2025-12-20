@@ -1,0 +1,12 @@
+{
+  "dataset": "trec",
+  "method": "mixture_soft",
+  "train_time_sec": 1658.2,
+  "epochs": 10,
+  "eval_loss": 1.282494306564331,
+  "eval_accuracy": 0.656,
+  "eval_runtime": 7.1511,
+  "eval_samples_per_second": 69.919,
+  "eval_steps_per_second": 34.96,
+  "epoch": 10.0
+}

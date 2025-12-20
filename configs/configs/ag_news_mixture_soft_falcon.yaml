@@ -1,0 +1,11 @@
+defaults:
+  - _base
+  - _self_
+dataset: ag_news
+model:
+  name: tiiuae/falcon-rw-1b
+method: mixture_soft
+method_cfg:
+  num_templates: 4
+  template_len: 10
+device: cuda:0

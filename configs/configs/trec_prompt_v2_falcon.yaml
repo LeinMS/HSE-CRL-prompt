@@ -1,0 +1,13 @@
+defaults:
+  - _base
+  - _self_
+dataset: trec
+model:
+  name: tiiuae/falcon-rw-1b
+method: prompt_v2
+method_cfg:
+  num_virtual_tokens: 20
+  prefix_projection: false
+train:
+  batch_size: 32
+device: cuda:0

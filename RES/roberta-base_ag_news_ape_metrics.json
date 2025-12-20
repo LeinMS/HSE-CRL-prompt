@@ -1,0 +1,7 @@
+{
+  "dataset": "ag_news",
+  "method": "ape",
+  "epochs": 0,
+  "eval_accuracy": 0.55,
+  "best_prompt": "Read the following news: \"{x}\". What is the category? Answer: "
+}

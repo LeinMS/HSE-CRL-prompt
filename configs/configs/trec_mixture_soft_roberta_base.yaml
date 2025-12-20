@@ -1,0 +1,15 @@
+defaults:
+  - _base
+  - _self_
+dataset: trec
+model:
+  name: roberta-base
+method: mixture_soft
+method_cfg:
+  num_templates: 4
+  template_len: 10
+  num_labels: 6
+train:
+  epochs: 10
+  batch: 2
+device: cuda:0

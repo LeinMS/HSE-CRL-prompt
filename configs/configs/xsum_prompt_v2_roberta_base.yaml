@@ -1,0 +1,15 @@
+defaults:
+  - _base
+  - _self_
+dataset: xsum
+model:
+  name: roberta-base
+method: prompt_v2
+method_cfg:
+  num_virtual_tokens: 12
+  prefix_projection: false
+device: cuda:0
+train:
+  epochs: 5
+  lr: 3e-3
+  batch: 8

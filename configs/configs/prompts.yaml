@@ -1,0 +1,17 @@
+prompts:
+  system: |
+    Generate prompt templates for {task_description}.
+    Each template must contain {mask_token} token for prediction.
+    Labels: {labels}.
+    Important: Use the EXACT FULL category names as shown above, do not abbreviate or modify them.
+    The model will predict one of these exact full category names.
+  
+  user: |
+    Examples:
+    {examples_text}
+
+    Generate {num_prompts} templates with {mask_token} token and {text} for classified text.
+    Format: "Template: <template>"
+    Remember to use the EXACT FULL category names as shown in the examples, do not abbreviate them.
+  
+  fallback: [] 

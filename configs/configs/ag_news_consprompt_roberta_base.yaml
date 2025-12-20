@@ -1,0 +1,18 @@
+defaults:
+  - _base
+  - _self_
+dataset: ag_news
+model:
+  name: roberta-base
+method: cons_prompt
+method_cfg:
+  templates:
+    - "Review: {text} Category (World, Sport, Business, Science): <mask>."
+  verbalizer: 
+      - ĠWorld
+      - ĠSport
+      - ĠBusiness
+      - ĠScience
+  lambda_p: 0.5
+  lambda_b: 0.5
+device: cuda:0

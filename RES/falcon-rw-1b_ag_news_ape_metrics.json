@@ -1,0 +1,7 @@
+{
+  "dataset": "ag_news",
+  "method": "ape",
+  "epochs": 0,
+  "eval_accuracy": 0.52,
+  "best_prompt": "Given the news \"{x}\", label it as World, Sport, Business, or Science:"
+}

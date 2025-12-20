@@ -1,0 +1,11 @@
+defaults:
+  - _base
+  - _self_
+dataset: sst2
+model:
+  name: roberta-base
+method: prompt_v2
+method_cfg:
+  num_virtual_tokens: 20
+  prefix_projection: false
+device: cuda:0

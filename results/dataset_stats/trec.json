@@ -1,0 +1,35 @@
+{
+  "dataset": "trec",
+  "num_train": 5452,
+  "num_val": 500,
+  "avg_len": 13.43,
+  "max_len": 41,
+  "p50": 13.0,
+  "p90": 19.0,
+  "p95": 22.0,
+  "p99": 27.0,
+  "task": "cls",
+  "num_labels": 6,
+  "class_distribution": {
+    "0": 86,
+    "1": 1250,
+    "2": 1162,
+    "3": 1223,
+    "4": 835,
+    "5": 896
+  },
+  "preview": [
+    {
+      "text": "How did serfdom develop in and then leave Russia ?",
+      "label": 2
+    },
+    {
+      "text": "What films featured the character Popeye Doyle ?",
+      "label": 1
+    },
+    {
+      "text": "How can I find a list of celebrities ' real names ?",
+      "label": 2
+    }
+  ]
+}

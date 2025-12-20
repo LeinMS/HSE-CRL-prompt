@@ -1,0 +1,42 @@
+dataset: trec
+method: ape
+
+model:
+  name: roberta-base
+
+method_cfg:
+  templates:
+    - "Question: \"{x}\". Type: "
+    - "Read the following question: \"{x}\". What is the type? Answer: "
+    - "Question: \"{x}\" → Type = "
+  verbalizer:
+    0:
+      - ĠAb
+    1:
+      - ĠEntity
+    2:
+      - ĠDescription
+    3:
+      - ĠHuman
+    4:
+      - ĠLocation
+    5:
+      - ĠNumber
+  labels:
+    - Abbreviation
+    - Entity
+    - Description
+    - Human
+    - Location
+    - Number
+  text_column: text
+  label_column: coarse_label
+  openai_api_key: sk-proj-0123456789abcdef0123456789abcdef
+  task_for_model: "Predict the type of a given question"
+
+device: cuda
+
+train:
+  epochs: 3
+  batch: 16
+  lr: 2e-5 

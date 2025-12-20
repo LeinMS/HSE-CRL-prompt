@@ -1,0 +1,12 @@
+{
+  "dataset": "trec",
+  "method": "prompt_v1",
+  "train_time_sec": 352.46,
+  "epochs": 5,
+  "eval_loss": 0.9518178105354309,
+  "eval_accuracy": 0.672,
+  "eval_runtime": 3.4226,
+  "eval_samples_per_second": 146.086,
+  "eval_steps_per_second": 18.407,
+  "epoch": 5.0
+}

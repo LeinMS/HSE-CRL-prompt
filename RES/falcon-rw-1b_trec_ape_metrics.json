@@ -1,0 +1,7 @@
+{
+  "dataset": "trec",
+  "method": "ape",
+  "epochs": 0,
+  "eval_accuracy": 0.41,
+  "best_prompt": "Classify the following text: \"{x}\". Label:"
+}

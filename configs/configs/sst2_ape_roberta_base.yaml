@@ -1,0 +1,31 @@
+dataset: sst2                     
+method: ape                      
+
+model:
+  name: roberta-base
+
+method_cfg:
+  templates:
+    - "Review: \"{x}\". Sentiment of review: "
+    - "Read the following review: \"{x}\". Is it positive or negative? Answer: "
+    - "Review: \"{x}\" → Sentiment = "
+  verbalizer:
+    0: 
+      - Ġnegative
+    1: 
+      - Ġpositive
+  labels: 
+    - negative
+    - positive
+  
+  text_column: sentence
+  label_column: label
+  openai_api_key: sk-proj-0123456789abcdef0123456789abcdef
+  task_for_model: "Predict the sentiment of a given review"
+
+device: cuda                     
+
+train:
+  epochs: 3                       
+  batch: 16                       
+  lr: 2e-5                        

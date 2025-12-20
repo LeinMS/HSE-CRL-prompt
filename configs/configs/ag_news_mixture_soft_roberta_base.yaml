@@ -1,0 +1,12 @@
+defaults:
+  - _base
+  - _self_
+dataset: ag_news
+model:
+  name: roberta-base
+method: mixture_soft
+method_cfg:
+  num_templates: 4
+  template_len: 10
+  num_labels: 4
+device: cuda:0
