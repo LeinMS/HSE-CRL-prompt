@@ -17,6 +17,7 @@ _METHODS = {
     "cons_prompt": "src.methods.consprompt_runner.ConsPromptRunner",
     "prewrite_rl": "src.methods.prewrite_rl.PrewriteRlRunner",
     "ape": "src.methods.ape.APERunner",
+    "ptcprl_embedding": "src.methods.ptcprl_embedding_runner.PTCPRLEmbeddingRunner",
 }
 
 
@@ -27,7 +28,7 @@ def _load_runner(name: str):
     return getattr(importlib.import_module(module), cls_name)
 
 
-@hydra.main(version_base=None, config_path="../configs", config_name="")
+@hydra.main(version_base=None, config_path="../configs/configs", config_name="")
 def main(cfg: DictConfig):
     train, val, test_ds, n_labels, task, tokenizer, train_raw, val_raw = get_dataset_bundle(
         cfg.dataset, cfg.model.name, cfg.get("max_len", 128)
@@ -98,15 +99,19 @@ def main(cfg: DictConfig):
         eval_accumulation_steps=10,
     )
     tracker = EpochTracker(out_dir)
-    trainer = Trainer(
-        model=model,
-        args=args,
-        train_dataset=train,
-        eval_dataset=val,
-        data_collator=collator,
-        compute_metrics=compute_metrics,
-        callbacks=[tracker],
-    )
+    if cfg.method == "ptcprl_embedding":
+        trainer = runner.build_trainer(train, val, collator, args, compute_metrics)
+        trainer.add_callback(tracker)
+    else:
+        trainer = Trainer(
+            model=model,
+            args=args,
+            train_dataset=train,
+            eval_dataset=val,
+            data_collator=collator,
+            compute_metrics=compute_metrics,
+            callbacks=[tracker],
+        )
 
     start = time.time()
     trainer.train()

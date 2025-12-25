@@ -76,7 +76,6 @@ def get_dataset_bundle(
             subset,
             cache_dir=cache_dir,
             download_config=download_cfg,
-            trust_remote_code=True
         )
 
         train_raw = raw["train"]
@@ -141,5 +140,4 @@ if __name__ == "__main__":
     for i in range(len(val_raw)):
         tokens = tokenizer(val_raw[i]["text"], truncation=True, max_length=MAX_LENGTH)
         print(f"Индекс {i}: длина токенов = {len(tokens['input_ids'])}")
-
 
