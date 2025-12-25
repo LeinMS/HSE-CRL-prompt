@@ -1,0 +1,17 @@
+defaults:
+  - _base
+  - _self_
+dataset: sst2
+model:
+  name: Qwen/Qwen3-Embedding-4B
+method: ptcprl_embedding
+method_cfg:
+  num_virtual_tokens: 20
+  phase1_epochs: 3
+  alpha: 1.0
+  beta: 0.3
+  gamma: 0.05
+  rl_subset_size: 32
+  k_negatives: 1
+  sigma: 2.0e-5
+device: cuda:0
