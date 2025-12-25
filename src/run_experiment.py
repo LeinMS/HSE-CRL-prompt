@@ -28,7 +28,7 @@ def _load_runner(name: str):
     return getattr(importlib.import_module(module), cls_name)
 
 
-@hydra.main(version_base=None, config_path="../configs", config_name="")
+@hydra.main(version_base=None, config_path="../configs/configs", config_name="")
 def main(cfg: DictConfig):
     train, val, test_ds, n_labels, task, tokenizer, train_raw, val_raw = get_dataset_bundle(
         cfg.dataset, cfg.model.name, cfg.get("max_len", 128)
