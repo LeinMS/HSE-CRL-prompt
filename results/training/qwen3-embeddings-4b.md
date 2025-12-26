@@ -50,7 +50,7 @@ The run used the YAML config `configs/configs/sst2_ptcprl_embedding_qwen3_4b.yam
 
 ## Resources Used
 
-- **GPU:** CUDA (Colab GPU)
+- **GPU:** CUDA (Vast.ai RTX 5090 32 Gb VRAM)
 - **Model size:** ~8 GB checkpoints (2 shards)
 - **Training time:** ~3206 sec (≈53 min)
 
